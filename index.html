@@ -198,6 +198,10 @@
     #mlb2-35881408.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover { background-color: #003A64 !important; }
     #mlb2-35881408.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,
     #mlb2-35881408.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter { color: #ff0000 !important; }
+    /* nasconde il checkbox nativo del browser */
+    #mlb2-35881408.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type="checkbox"] {
+      position: absolute; z-index: -1; opacity: 0; margin-top: 5px; margin-left: -1.5rem; overflow: visible;
+    }
     @media only screen and (max-width: 480px) {
       #mlb2-35881408.ml-form-embedContainer .ml-form-embedWrapper.embedDefault,
       #mlb2-35881408.ml-form-embedContainer .ml-form-embedWrapper.embedPopup { width: 100%!important; }
@@ -375,6 +379,10 @@
     #mlb2-14767897.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover { background-color: #003A64 !important; }
     #mlb2-14767897.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,
     #mlb2-14767897.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter { color: #ff0000 !important; }
+    /* nasconde il checkbox nativo del browser */
+    #mlb2-14767897.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type="checkbox"] {
+      position: absolute; z-index: -1; opacity: 0; margin-top: 5px; margin-left: -1.5rem; overflow: visible;
+    }
     @media only screen and (max-width: 450px) {
       #mlb2-14767897.ml-form-embedContainer .ml-form-embedWrapper.embedDefault,
       #mlb2-14767897.ml-form-embedContainer .ml-form-embedWrapper.embedPopup { width: 100%!important; }
@@ -1246,10 +1254,7 @@
             <div class="ml-form-align-center">
               <div class="ml-form-embedWrapper embedForm">
                 <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-                  <div class="ml-form-embedContent" style=" ">
-                    <h4></h4>
-                    <p><br></p>
-                  </div>
+                  <div class="ml-form-embedContent" style="margin-bottom: 0px;"></div>
                   <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/944524/forms/121224266888775224/subscribe" data-code="" method="post" target="_blank">
                     <div class="ml-form-formContent">
                       <div class="ml-form-fieldRow">
