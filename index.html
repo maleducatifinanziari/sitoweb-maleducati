@@ -1077,9 +1077,17 @@
     }
 
     .mf-servizi-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 24px;
+    }
+
+    /* Larghezza base flessibile: su desktop le card stanno 4 per riga
+       e l'eventuale quinta card resta centrata nella riga sotto */
+    .mf-servizi-grid .mf-servizio-card {
+      flex: 1 1 240px;
+      max-width: 280px;
     }
 
     .mf-servizio-card {
@@ -1165,7 +1173,7 @@
       .mf-chi-siamo-photo img { max-width: 360px; margin: 0 auto; }
 
       .mf-servizi { padding: 64px 24px; }
-      .mf-servizi-grid { grid-template-columns: repeat(2, 1fr); }
+      .mf-servizi-grid .mf-servizio-card { flex-basis: 140px; max-width: none; }
 
       .mf-risorse { padding: 72px 24px; }
       .mf-risorse-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -1287,7 +1295,14 @@
           <div class="mf-servizio-icon">🤝</div>
           <h3>I nostri percorsi</h3>
           <p>Scopri i nostri percorsi personalizzati per risparmiare e liberarti dall'ansia per i soldi.</p>
-          <a href="#percorsi" class="mf-servizio-link">Scrivici →</a>
+          <a href="#percorsi" class="mf-servizio-link">Scopri i percorsi →</a>
+        </div>
+
+        <div class="mf-servizio-card">
+          <div class="mf-servizio-icon">💬</div>
+          <h3>Le nostre consulenze</h3>
+          <p>Nelle consulenze personalizzate partiamo dalla tua situazione e creiamo un piano su misura per aiutarti a risparmiare senza rinunciare a goderti la vita.</p>
+          <a href="https://maleducatifinanziari.setmore.com/services/2e044620-b88e-4e62-88bf-58f208899923" target="_blank" rel="noopener" class="mf-servizio-link">Prenota la tua consulenza →</a>
         </div>
 
       </div>
@@ -1534,8 +1549,8 @@
   <section class="mf-percorsi" id="percorsi">
     <div class="mf-percorsi-inner">
       <h2 class="mf-section-title">Percorsi Personalizzati</h2>
-      <p class="mf-percorsi-text">Se vuoi applicare il metodo alla tua situazione personale con il nostro supporto diretto, i percorsi personalizzati sono pensati per te. Scrivici per scoprire come funzionano.</p>
-      <a href="https://wa.me/393758374013?text=Ciao,%20vorrei%20informazioni%20sui%20percorsi%20personalizzati" target="_blank" rel="noopener" class="mf-percorsi-cta">Scrivici →</a>
+      <p class="mf-percorsi-text">Se vuoi applicare il metodo alla tua situazione personale con il nostro supporto diretto, i percorsi personalizzati sono pensati per te. Scopri come funzionano.</p>
+      <a href="https://budget.maleducatifinanziari.com/" target="_blank" rel="noopener" class="mf-percorsi-cta">Scopri i percorsi →</a>
     </div>
   </section>
 
