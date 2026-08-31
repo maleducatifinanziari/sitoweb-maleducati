@@ -1082,21 +1082,20 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 24px;
+      gap: 20px;
     }
 
-    /* Larghezza base flessibile: su desktop le card stanno 4 per riga
-       e l'eventuale quinta card resta centrata nella riga sotto */
+    /* Card strette: su desktop stanno tutte e 5 in una sola riga */
     .mf-servizi-grid .mf-servizio-card {
-      flex: 1 1 240px;
-      max-width: 280px;
+      flex: 1 1 180px;
+      max-width: 220px;
     }
 
     .mf-servizio-card {
       background: var(--mf-white);
       border: 1px solid rgba(0, 58, 100, 0.1);
       border-radius: 16px;
-      padding: 32px 24px;
+      padding: 28px 18px;
       text-align: center;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: flex;
@@ -1123,7 +1122,7 @@
 
     .mf-servizio-card h3 {
       font-family: var(--mf-font-title);
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
       color: var(--mf-navy);
       letter-spacing: -0.3px;
@@ -1133,26 +1132,30 @@
     }
 
     .mf-servizio-card p {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--mf-text);
-      line-height: 1.75;
-      margin-bottom: 24px;
+      line-height: 1.7;
+      margin-bottom: 20px;
       flex: 1;
     }
 
     .mf-servizio-link {
-      display: inline-block;
-      font-size: 14px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
       font-weight: 700;
       color: var(--mf-navy);
-      border-bottom: 2px solid rgba(0, 58, 100, 0.25);
-      padding-bottom: 2px;
-      transition: color 0.2s, border-color 0.2s;
+      background: var(--mf-yellow);
+      padding: 11px 10px;
+      border-radius: 8px;
+      letter-spacing: 0.2px;
+      line-height: 1.3;
+      transition: background 0.2s ease;
     }
 
     .mf-servizio-link:hover {
-      color: var(--mf-navy);
-      border-color: var(--mf-navy);
+      background: var(--mf-yellow-dark);
     }
 
     /* ============================================================
