@@ -1180,7 +1180,9 @@
       .mf-chi-siamo-photo img { max-width: 360px; margin: 0 auto; }
 
       .mf-servizi { padding: 64px 24px; }
-      .mf-servizi-grid .mf-servizio-card { flex-basis: 140px; max-width: none; }
+      /* Su mobile: colonna singola, ordine letto dal basso verso l'alto */
+      .mf-servizi-grid { flex-direction: column-reverse; flex-wrap: nowrap; }
+      .mf-servizi-grid .mf-servizio-card { flex-basis: auto; max-width: none; }
 
       .mf-risorse { padding: 72px 24px; }
       .mf-risorse-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -1275,21 +1277,9 @@
         <h2 class="mf-section-title">Da dove vuoi iniziare?</h2>
       </div>
 
+      <!-- Ordine su desktop (da sinistra): percorsi, consulenze, bollette, libro.
+           Su mobile la griglia usa column-reverse: stesso ordine letto dal basso. -->
       <div class="mf-servizi-grid">
-
-        <div class="mf-servizio-card">
-          <div class="mf-servizio-icon">⚡</div>
-          <h3>Risparmia sulle bollette</h3>
-          <p>In 15 minuti ti aiutiamo a capire se stai pagando troppo e ti troviamo un'offerta che ti fa risparmiare. Servizio Gratuito.</p>
-          <a href="https://bollette.maleducatifinanziari.com" class="mf-servizio-link">Prenota la call →</a>
-        </div>
-
-        <div class="mf-servizio-card">
-          <div class="mf-servizio-icon">📖</div>
-          <h3>Leggi il libro</h3>
-          <p>Scopri i meccanismi inconsci che ti fanno spendere e come usare i soldi per stare meglio grazie al nostro metodo.</p>
-          <a href="#libro" class="mf-servizio-link">Scopri il libro →</a>
-        </div>
 
         <div class="mf-servizio-card">
           <div class="mf-servizio-icon">🤝</div>
@@ -1303,6 +1293,20 @@
           <h3>Le nostre consulenze</h3>
           <p>Nelle consulenze partiamo dalla tua situazione e costruiamo un piano su misura per aiutarti a risparmiare.</p>
           <a href="https://maleducatifinanziari.setmore.com/services/2e044620-b88e-4e62-88bf-58f208899923" target="_blank" rel="noopener" class="mf-servizio-link">Prenota ora →</a>
+        </div>
+
+        <div class="mf-servizio-card">
+          <div class="mf-servizio-icon">⚡</div>
+          <h3>Risparmia sulle bollette</h3>
+          <p>In 15 minuti ti aiutiamo a capire se stai pagando troppo e ti troviamo un'offerta che ti fa risparmiare. Servizio Gratuito.</p>
+          <a href="https://bollette.maleducatifinanziari.com" class="mf-servizio-link">Prenota la call →</a>
+        </div>
+
+        <div class="mf-servizio-card">
+          <div class="mf-servizio-icon">📖</div>
+          <h3>Leggi il libro</h3>
+          <p>Scopri i meccanismi inconsci che ti fanno spendere e come usare i soldi per stare meglio grazie al nostro metodo.</p>
+          <a href="#libro" class="mf-servizio-link">Scopri il libro →</a>
         </div>
 
       </div>
